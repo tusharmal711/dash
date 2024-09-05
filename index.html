@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0">
+	<title>TushTEAM</title>
+	<link rel="stylesheet"
+		href="index.css">
+	<link rel="stylesheet"
+		href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+	<!-- for header part -->
+	<header>
+
+	
+			<div class="logo">
+         <label class="limg"><img src="attendence.png" height="40px" width="40px" alt=""></label>
+        <label class="text1">AttendenceBook</label>
+      </div>
+		
+		
+
+		
+
+		<div class="message">
+		<i class="fa-solid fa-bell" id="not"></i>
+			<div class="dp">
+			<img src="cup.jpg" height="40px" width="40px" onclick="red()">
+			</div>
+			<i class="fa-solid fa-ellipsis-vertical" id="dot3"></i>
+		</div>
+
+	</header>
+	
+
+	<div class="main-container">
+		<div class="navcontainer">
+			<nav class="nav">
+				<div class="nav-upper-options">
+
+					<div class="nav-option option1">
+
+          <i class="fa fa-home" style="font-size:24px"></i><a href="#">HOME</a>
+					</div>
+
+					<div class="nav-option option2">
+					
+          <i class="fa fa-user-circle-o" style="font-size:24px"></i><a href="#">PROFILE</a>
+					</div>
+
+					<div class="nav-option option3">
+
+					<i class="fa-solid fa-plus" style="font-size:20px"></i><a href="#">ADD STUDENT</a>
+					</div>
+
+					<div class="nav-option option4">
+
+					<i class="fa fa-address-card" style="font-size:20px"></i><a href="#">ATTENDENCE</a>
+					</div>
+
+					<div class="nav-option option5">
+
+                    <i class="fa fa-calendar" style="font-size:21px"></i><a href="#">CHECK ATTENDENCE</a>
+					</div>
+
+					<div class="nav-option option6">
+
+					<i class="fa fa-lock" style="font-size:24px"></i><a href="#">PRIVACY AND SECURITY</a>
+					</div>
+
+					<div class="nav-option option7">
+
+          <i class="fa fa-gear" style="font-size:24px"></i><a href="#">SETTING</a>
+					</div>
+          <div class="nav-option option8">
+
+          <i class="fa fa-question-circle" style="font-size:24px"></i><a href="#">HELP</a>
+           </div>
+           <div class="nav-option option9">
+
+           <i class="fa fa-sign-out" style="font-size:24px"></i><a href="#">LOGOUT</a>
+           </div>
+				</div>
+			</nav>
+		</div>
+		
+		<nav class="navBottom" id="nb">
+				
+			<li style="color:blue"><i class="fa fa-home"></i><a href="#">Home</a></li>
+			<li><i class="fa fa-user-circle-o"></i><a href="#">Profile</a></li>
+			<li id="li3"><i class="fa-solid fa-circle-plus"></i><a href="#" id="ed1">Add</a></li>
+			<li><i class="fa fa-address-card" id="i3"></i><a href="#" id="ed">Attendence</a></li>
+			<li id="li4"><i class="fa-regular fa-calendar-days"  style="color:cyan"></i><a href="#"  style="color:cyan">Check</a></li>
+				
+			</nav>
+		<div class="main" id="main">
+
+		<div class="more" id="more">
+			<a href="#">Privacy & security</a>
+			<a href="#">Help</a>
+			<a onclick="op8()">Logout</a>
+			
+		</div>
+		<div class="popup8">
+  <form action="#" method="post">
+  <span>Logout of your account?</span>
+  <div class="logbtn">
+    <button type="button" id="logbtn1" onclick="can8()">Cancel</button>
+    <button type="submit" name="yes" id="logbtn2">Logout</button>
+  </div>
+      </form>
+</div>
+
+
+  <script>
+	let more=document.getElementById("more");
+	let dot3=document.getElementById("dot3");
+	let main=document.getElementById("main");
+	let popup8=document.getElementsByClassName("popup8")[0];
+	function op8()
+{
+  
+  popup8.style.display="block";
+
+
+}
+
+function can8()
+{
+popup8.style.display="none";
+}
+	dot3.addEventListener("click",function()
+	{
+       more.classList.add("more_show");
+	});
+	main.addEventListener("click",function()
+	{
+      more.classList.remove("more_show");
+	  more.classList.add("transition");
+	});
+  </script>
+
+		
+
+
+
+
+        <div class="search">
+			
+		<p class="heading">Search here</p>
+		<div class="sear">
+			<div>
+            <form action="#" method="post">
+
+
+<p class="para">Please enter date here <input type="date" id="search" name="date1" required> <button type="submit" name="btn"id="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button></p>
+<div class="altdiv">
+	<button onclick="sisu()">Search Here</button>
+</div>
+</form>
+
+
+   
+	</div>
+	<div>
+	<form action="#" method="post">
+
+
+<p class="para">OR Check each student attendence details <input type="submit" name="btn1"id="btn" value="Check"></p>
+
+<div class="altdiv1">
+	<button type="submit" name="btn1">Check Percentage</button>
+</div>
+
+</form>
+</div>
+</div>
+
+	
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- filtering part is ending from here -->
+
+
+
+
+
+
+
+
+
+
+          
+        </div>
+		
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+</body>
+</html>
